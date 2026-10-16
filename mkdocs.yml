@@ -1,0 +1,159 @@
+site_name: discord
+site_description: Documentation for discord, a Discord bot framework for Sonata.
+site_author: loopy5418
+# Set this to where GitHub Pages serves the site, e.g. https://<user>.github.io/<repo>/
+# site_url: https://loopy5418.github.io/discord-docs/
+
+repo_url: https://github.com/loopy5418/discord
+repo_name: loopy5418/discord
+edit_uri: ""
+
+copyright: discord is made by loopy5418
+
+# With `mkdocs build --strict`, any of these fails the build.
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot-happy-outline
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra_css:
+  - assets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.mark
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - getting-started/index.md
+      - Installation: getting-started/installation.md
+      - Setting up a Discord application: getting-started/discord-application.md
+      - Your first bot: getting-started/first-bot.md
+      - Project structure: getting-started/project-structure.md
+      - Building a program: getting-started/building.md
+  - Guide:
+      - guide/index.md
+      - Basics:
+          - The bot: guide/bot.md
+          - The context: guide/context.md
+          - Responding: guide/responding.md
+          - Message content: guide/messages.md
+      - Commands:
+          - Slash commands: guide/slash-commands.md
+          - Options: guide/options.md
+          - Autocomplete: guide/autocomplete.md
+          - Subcommands: guide/subcommands.md
+          - Prefix commands: guide/prefix-commands.md
+          - Context menu commands: guide/context-menus.md
+          - Registering and syncing: guide/syncing.md
+          - User-installed apps: guide/user-installs.md
+      - Interactivity:
+          - Components: guide/components.md
+          - Component handlers: guide/component-handlers.md
+          - Modals: guide/modals.md
+          - Waiting for input: guide/waiting.md
+      - Running a bot:
+          - Events: guide/events.md
+          - Intents: guide/intents.md
+          - Checks, permissions and cooldowns: guide/checks.md
+          - Middleware and errors: guide/middleware.md
+          - Loading from files: guide/loading.md
+          - The cache: guide/cache.md
+          - Calling the API: guide/api.md
+          - HTTP interactions: guide/http-interactions.md
+  - Reference:
+      - reference/index.md
+      - discord (module): reference/module.md
+      - Bot: reference/bot.md
+      - Bot options: reference/bot-options.md
+      - Context: reference/context.md
+      - Definitions: reference/definitions.md
+      - Message input: reference/message-input.md
+      - ui (components): reference/ui.md
+      - api (endpoints): reference/api.md
+      - Rest: reference/rest.md
+      - permissions: reference/permissions.md
+      - fmt (formatting): reference/format.md
+      - enums: reference/enums.md
+      - intents: reference/intents.md
+      - Cache: reference/cache.md
+      - Gateway: reference/gateway.md
+      - Types: reference/types.md
+  - Examples:
+      - examples/index.md
+      - Example bots: examples/bundled.md
+      - Recipes: examples/recipes.md
+  - Help:
+      - help/index.md
+      - Troubleshooting: help/troubleshooting.md
+      - How it works: help/internals.md
+      - Glossary: help/glossary.md
